@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm --prefix ./server install",
-    "start": "npm --prefix ./server run start"
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/JoshPwarner/The-Mastermind-Quiz/issues"
   },
-  "homepage": "https://github.com/JoshPwarner/The-Mastermind-Quiz#readme"
+  "homepage": "https://github.com/JoshPwarner/The-Mastermind-Quiz#readme",
+  "dependencies": {
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "socket.io-client": "^4.5.1"
+  }
 }

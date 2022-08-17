@@ -3,7 +3,6 @@ class Games {
         this.games = [];
         this.players = [];
     }
-
     addGame(hostID, roomName, difficulty, count, subject) {
         let game = {
             host: hostID,
@@ -14,13 +13,10 @@ class Games {
             players: [],
             active: false,
         };
-
         this.games.push(game);
-
         this.games.forEach((room) => console.log(room));
         return game;
     }
-
     addPlayer(username, room, hostID) {
         let player = {
             username: username,
@@ -28,7 +24,6 @@ class Games {
             roomID: hostID,
             score: 0,
         };
-
         this.players.push(player);
         let game = this.games.find((y) => y.room == room);
         try {
@@ -40,47 +35,37 @@ class Games {
             return { err: err };
         }
     }
-
     getPlayersForGame(roomName) {
         const game = this.games.filter((game) => game.room === roomName);
         console.log(game.players);
     }
-
     filterRoom(roomName) {
         return this.games.room === roomName;
     }
-
     getPlayerData(roomName) {
         let game = this.games.find((y) => y.room == roomName);
-
         if (game === undefined) {
             return "error";
         }
         return game.players;
     }
-
     addScore(room, username, score) {
         let game = this.games.find((y) => y.room == room);
-
         console.log(game, "addscore gameroom");
         console.log(username, "addscore username");
         try {
             let player = game.players.find((p) => p.username === username);
-
             player.score = score;
-
             return game.players;
         } catch (err) {
             console.log("add score error: " + err);
             return { err: err };
         }
     }
-
     getGame(roomName) {
         let game = this.games.find((y) => y.room == roomName);
         return game;
     }
-
     canRoomBeJoined(roomName) {
         console.log("Looking for room");
         const game = this.games.filter((game) => {
@@ -101,7 +86,6 @@ class Games {
         });
         return game;
     }
-
     checkRoomName(room) {
         let game = this.getGameByRoom(room);
         if (game.length > 0) {
@@ -112,6 +96,8 @@ class Games {
     }
 }
 
+
 module.exports = { Games };
+
 
 

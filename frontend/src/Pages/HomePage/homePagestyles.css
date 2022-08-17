@@ -1,0 +1,219 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');*/
+/*@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";*/
+@import url('https://fonts.googleapis.com/css2?family=Amethysta&family=Sofia&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#root {
+    background-image:url('../../images/img3jpg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 731px;
+    opacity: 0.8;    
+}
+
+#welcome {
+    font-family: 'Amethysta', serif;
+    background-color: ghostwhite;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    border-radius:30px ;
+    margin-left: 530px;
+    margin-top: 190px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#leaderboardIcon {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    color: ghostwhite;
+    
+}
+
+
+h1 {
+   background-color:white;
+   opacity: 0.9;
+    color: black;
+    font-size: 2em;
+    font-family: 'Amethysta', serif;
+    text-align: center;
+    line-height: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    white-space:nowrap;
+    display: inline;
+    padding-block: 10px;
+    padding-inline: 10px;
+   
+
+  }
+
+  .headingh1 {
+    margin-top: 20px;
+  }
+  
+  span {
+    color: #000;
+    font-family: 'Caesar Dressing', cursive;
+    font-size: 1.2em;
+    text-transform: lowercase;
+    vertical-align: middle;
+    letter-spacing: .2em;
+  }
+  
+  .fire {
+    animation: animation 1s ease-in-out infinite alternate;
+    -moz-animation: animation 1s ease-in-out infinite alternate;
+    -webkit-animation: animation 1s ease-in-out infinite alternate;
+    -o-animation: animation 1s ease-in-out infinite alternate;
+  }
+  
+ 
+  @keyframes animation
+  {
+  0% {text-shadow: 0 0 20px #fefcc9,
+    10px -10px 30px #feec85,
+    -20px -20px 40px #ffae34,
+    20px -40px 50px #ec760c,
+    -20px -60px 60px #cd4606,
+    0 -80px 70px #973716,
+    10px -90px 80px #451b0e;}
+  100% {text-shadow: 0 0 20px #fefcc9,
+    10px -10px 30px #fefcc9,
+    -20px -20px 40px #feec85,
+    22px -42px 60px #ffae34,
+    -22px -58px 50px #ec760c,
+    0 -82px 80px #cd4606,
+    10px -90px 80px  #973716;}
+  }
+  
+  @-moz-keyframes animation
+  {
+  0% {text-shadow: 0 0 20px #fefcc9,
+    10px -10px 30px #feec85,
+    -20px -20px 40px #ffae34,
+    20px -40px 50px #ec760c,
+    -20px -60px 60px #cd4606,
+    0 -80px 70px #973716,
+    10px -90px 80px #451b0e;}
+  100% {text-shadow: 0 0 20px #fefcc9,
+    10px -10px 30px #fefcc9,
+    -20px -20px 40px #feec85,
+    22px -42px 60px #ffae34,
+    -22px -58px 50px #ec760c,
+    0 -82px 80px #cd4606,
+    10px -90px 80px  #973716;}
+  }
+  
+  @-webkit-keyframes animation
+  {
+  0% {text-shadow: 0 0 20px #fefcc9,
+    10px -10px 30px #feec85,
+    -20px -20px 40px #ffae34,
+    20px -40px 50px #ec760c,
+    -20px -60px 60px #cd4606,
+    0 -80px 70px #973716,
+    10px -90px 80px #451b0e;}
+  100% {text-shadow: 0 0 20px #fefcc9,
+    10px -10px 30px #fefcc9,
+    -20px -20px 40px #feec85,
+    22px -42px 60px #ffae34,
+    -22px -58px 50px #ec760c,
+    0 -82px 80px #cd4606,
+    10px -90px 80px  #973716;}
+  }
+  
+  @-o-keyframes animation
+  {
+  0% {text-shadow: 0 0 20px #fefcc9,
+    10px -10px 30px #feec85,
+    -20px -20px 40px #ffae34,
+    20px -40px 50px #ec760c,
+    -20px -60px 60px #cd4606,
+    0 -80px 70px #973716,
+    10px -90px 80px #451b0e;}
+  100% {text-shadow: 0 0 20px #fefcc9,
+    10px -10px 30px #fefcc9,
+    -20px -20px 40px #feec85,
+    22px -42px 60px #ffae34,
+    -22px -58px 50px #ec760c,
+    0 -82px 80px #cd4606,
+    10px -90px 80px  #973716;}
+  }
+
+
+
+
+
+
+.form {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+}
+.form1 {
+    margin-top: 20px;
+    
+}
+
+.form2 {
+  margin-top: 10px;
+  
+}
+
+input {
+    margin-left: 30px;
+    height: 25px;
+    border-radius: 20px;
+    border: 2px solid black;
+    letter-spacing: 1;
+}
+
+.button-container {
+    font-size: 1.5rem;
+}
+
+#join {
+    font-family: 'Amethysta', serif;
+    font-size: 1.2rem;
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin: 4px;
+    margin-top: 30px;
+    
+}
+
+#join:hover {
+  background-color: #6A1616;
+  color: ghostwhite;
+}
+
+.footer {
+  font-family: 'Amethysta', serif;
+  font-size: 1.2rem;
+  padding-top: 5px;
+}
+
+.aboutGame {
+  color: ghostwhite;
+  position: absolute;
+  bottom: 10px;
+  left: 700px;
+  font-size: 1.3rem;
+  font-family: 'Amethysta', serif;
+
+}  
+
