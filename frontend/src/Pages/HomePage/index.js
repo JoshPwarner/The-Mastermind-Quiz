@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setHost, setPlayer, setID } from "../../actions/userType";
 import { socket } from "../../Socket/index.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrophy } from "@fortawesome/fontawesome-free-solid";
 
 const HomePage = () => {
     const dispatch = useDispatch();
@@ -138,9 +136,7 @@ const HomePage = () => {
 
     return (
         <div id="welcome">
-            <p id="leaderboardIcon" onClick={leaderBoard}>
-                LEADERBOARD <FontAwesomeIcon className="iconT" icon={faTrophy} beat />
-            </p>
+            <p id="leaderboardIcon" onClick={leaderBoard}></p>
             <h1>Quiz Pro Quo</h1>
             <form>
                 <label htmlFor="username">Username</label>

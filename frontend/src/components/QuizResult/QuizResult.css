@@ -1,0 +1,45 @@
+.result-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  position: relative;
+}
+
+.result-card {
+  background: #fff;
+  box-shadow: 0 20px 100px #22422dbf;
+  border-radius: 10px;
+  width: 700px;
+  height: 400px;
+  margin: 70px auto;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+.results-page-img {
+  position: absolute;
+  top: -50%;
+}
+
+.result-txt {
+  display: flex;
+  gap: 3px;
+}
+
+.retry-btn {
+  width: 270px;
+  height: 40px;
+  background: #22422d;
+  color: #fff;
+  border-radius: 30px;
+  border-style: none;
+}

@@ -1,0 +1,8 @@
+.quiz-screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+  width: 1200px;
+  margin: 0 auto;
+}
