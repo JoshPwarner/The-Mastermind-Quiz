@@ -4,7 +4,7 @@ import Questions from "../../components/Question";
 import QuizResult from "../../components/QuizResult";
 import "./QuizPage.css";
 
-const QuizPage = ({ retry }) => {
+const QuizPage = ({ retry, query }) => {
   const questions = useSelector((state) => state.quiz);
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -12,16 +12,16 @@ const QuizPage = ({ retry }) => {
   const [markedAnswers, setMarkedAnswers] = useState(
     new Array(questions.result.results)
   );
-
+  console.log(questions);
   // const [rightAnswers, setRightAnswers] = useState(
   //   new Array(questions.result.results)
   // );
 
-  const isQuestionEnd = currentQuestionIndex == questions.result.results;
+  const isQuestionEnd = currentQuestionIndex == questions.amount;
 
-  console.log(questions);
+  console.log(typeof isQuestionEnd);
 
-  // const moppy = questions.result.results.forEach((result, index) => {
+  // questions.result.results.forEach((result, index) => {
   //   const results = Object.entries(result);
 
   //   console.log(results);
@@ -31,16 +31,17 @@ const QuizPage = ({ retry }) => {
   //   }
   // });
 
-  // console.log(moppy);
-
   function calculateResult() {
     let correct = 0;
     questions.result.results.forEach((result) => {
       const check = Object.entries(result);
       for (const [key, value] of check) {
+        console.log(value, key);
         if (value == markedAnswers) {
           correct++;
-          console.log(check);
+          // console.log(value);
+        } else {
+          console.log("no chance!");
         }
       }
     });
@@ -65,10 +66,9 @@ const QuizPage = ({ retry }) => {
             setMarkedAnswers((arr) => {
               let newArr = [...arr];
               newArr[currentQuestionIndex] = index;
-
               return newArr;
             });
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
+            setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
           }}
           // collectAnswer={(index) => {
           //   setRightAnswers((arr) => {
@@ -82,7 +82,7 @@ const QuizPage = ({ retry }) => {
       );
     }
   };
-
+  console.log(isQuestionEnd);
   return (
     <div className="quiz-screen-container">
       {isQuestionEnd ? (

@@ -73,11 +73,11 @@ const Questions = ({ query, totalQuestions, currentQuestion, setAnswer }) => {
     if (timer.current) {
       clearTimeout(timer.current);
     }
-    // setAnswer(selectedOption);
-    flushSync(() => {
-      setAnswer(selectedOption);
-      // collectAnswer(answersLog);
-    });
+    setAnswer(selectedOption);
+    // flushSync(() => {
+    //   setAnswer(selectedOption);
+    //   // collectAnswer(answersLog);
+    // });
     setSelectedOption(null);
     // setAnswersLog(null);
   }
