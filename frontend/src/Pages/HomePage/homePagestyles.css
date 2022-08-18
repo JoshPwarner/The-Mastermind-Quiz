@@ -8,45 +8,51 @@
     box-sizing: border-box;
 }
 
-#root {
-    background-image:url('../../images/img3jpg.webp');
+
+/* #root {
+    background-image:url('../../images/img2.jpg');
+
     background-repeat: no-repeat;
     background-size: cover;
-    height: 731px;
+    height: 100vh;
     opacity: 0.8;    
-}
+} */
 
-#welcome {
+/* #welcome {
     font-family: 'Amethysta', serif;
     background-color: ghostwhite;
     opacity: 0.7;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     width: 30%;
     height: 40%;
     border-radius:30px ;
-    margin-left: 530px;
-    margin-top: 190px;
     justify-content: center;
+    margin-top: 190px;
+    
     align-items: center;
 
 
-}
+} */
 
 #leaderboardIcon {
+  font-family: 'Amethysta', serif;
     font-size: 1.5rem;
     padding-bottom: 10px;
-    color: ghostwhite;
+    color:whitesmoke;
+    display: inline;
+    position: relative;
+    
     
 }
 
 
 h1 {
-   background-color:white;
+  
    opacity: 0.9;
-    color: black;
-    font-size: 2em;
+    color: red;
+    font-size: 2.5em;
     font-family: 'Amethysta', serif;
     text-align: center;
     line-height: 3rem;
@@ -54,166 +60,146 @@ h1 {
     letter-spacing: .3em;
     white-space:nowrap;
     display: inline;
-    padding-block: 10px;
-    padding-inline: 10px;
-   
+    padding-block: 5px;
+    padding-inline: 15px;
+    background-color:whitesmoke;
+    border-radius: 8px;
+    text-shadow: 2px 2px 5px black;
+    
 
   }
 
   .headingh1 {
-    margin-top: 20px;
+    margin-top: 30px;
+  } 
+
+  .bgImg {
+    position: absolute;
+    justify-content: center;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    width: 210vh;
+    height: 100vh;
+    opacity: 0.9;
+    
+    
   }
-  
-  span {
-    color: #000;
-    font-family: 'Caesar Dressing', cursive;
-    font-size: 1.2em;
-    text-transform: lowercase;
-    vertical-align: middle;
-    letter-spacing: .2em;
-  }
-  
-  .fire {
-    animation: animation 1s ease-in-out infinite alternate;
-    -moz-animation: animation 1s ease-in-out infinite alternate;
-    -webkit-animation: animation 1s ease-in-out infinite alternate;
-    -o-animation: animation 1s ease-in-out infinite alternate;
+
+  .scrollPage {
+    position: absolute;
+    opacity: 0.7;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    left:550px;
   }
   
  
-  @keyframes animation
-  {
-  0% {text-shadow: 0 0 20px #fefcc9,
-    10px -10px 30px #feec85,
-    -20px -20px 40px #ffae34,
-    20px -40px 50px #ec760c,
-    -20px -60px 60px #cd4606,
-    0 -80px 70px #973716,
-    10px -90px 80px #451b0e;}
-  100% {text-shadow: 0 0 20px #fefcc9,
-    10px -10px 30px #fefcc9,
-    -20px -20px 40px #feec85,
-    22px -42px 60px #ffae34,
-    -22px -58px 50px #ec760c,
-    0 -82px 80px #cd4606,
-    10px -90px 80px  #973716;}
-  }
-  
-  @-moz-keyframes animation
-  {
-  0% {text-shadow: 0 0 20px #fefcc9,
-    10px -10px 30px #feec85,
-    -20px -20px 40px #ffae34,
-    20px -40px 50px #ec760c,
-    -20px -60px 60px #cd4606,
-    0 -80px 70px #973716,
-    10px -90px 80px #451b0e;}
-  100% {text-shadow: 0 0 20px #fefcc9,
-    10px -10px 30px #fefcc9,
-    -20px -20px 40px #feec85,
-    22px -42px 60px #ffae34,
-    -22px -58px 50px #ec760c,
-    0 -82px 80px #cd4606,
-    10px -90px 80px  #973716;}
-  }
-  
-  @-webkit-keyframes animation
-  {
-  0% {text-shadow: 0 0 20px #fefcc9,
-    10px -10px 30px #feec85,
-    -20px -20px 40px #ffae34,
-    20px -40px 50px #ec760c,
-    -20px -60px 60px #cd4606,
-    0 -80px 70px #973716,
-    10px -90px 80px #451b0e;}
-  100% {text-shadow: 0 0 20px #fefcc9,
-    10px -10px 30px #fefcc9,
-    -20px -20px 40px #feec85,
-    22px -42px 60px #ffae34,
-    -22px -58px 50px #ec760c,
-    0 -82px 80px #cd4606,
-    10px -90px 80px  #973716;}
-  }
-  
-  @-o-keyframes animation
-  {
-  0% {text-shadow: 0 0 20px #fefcc9,
-    10px -10px 30px #feec85,
-    -20px -20px 40px #ffae34,
-    20px -40px 50px #ec760c,
-    -20px -60px 60px #cd4606,
-    0 -80px 70px #973716,
-    10px -90px 80px #451b0e;}
-  100% {text-shadow: 0 0 20px #fefcc9,
-    10px -10px 30px #fefcc9,
-    -20px -20px 40px #feec85,
-    22px -42px 60px #ffae34,
-    -22px -58px 50px #ec760c,
-    0 -82px 80px #cd4606,
-    10px -90px 80px  #973716;}
-  }
-
-
-
-
-
-
+ 
 .form {
-    margin-bottom: 40px;
-    font-size: 1.5rem;
+  font-family: 'Amethysta', serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+  
 }
+
 .form1 {
-    margin-top: 20px;
-    
+
+  margin-bottom: 5px;
+  margin-top: 30px;
+
 }
 
 .form2 {
-  margin-top: 10px;
-  
+  margin-bottom: 15px;
 }
 
 input {
-    margin-left: 30px;
+   font-family: 'Amethysta', serif;
     height: 25px;
-    border-radius: 20px;
-    border: 2px solid black;
-    letter-spacing: 1;
+    border:none;
+    border-bottom: 2px solid ghostwhite;
+    margin-bottom: 40px;
+    background: none;
+    color:ghostwhite;
+    font-weight: 300;
+    font-size: 1.2rem;
+    outline: none;
+   
 }
 
 .button-container {
+  font-family: 'Amethysta', serif;
     font-size: 1.5rem;
+    margin-left: 15px;
 }
 
 #join {
+  font-family: 'Amethysta', serif;
     font-family: 'Amethysta', serif;
     font-size: 1.2rem;
     height: 30px;
     width: 150px;
-    border-radius: 20px;
-    border: 2px solid black;
-    margin: 4px;
-    margin-top: 30px;
+    border-radius: 5px;
+    border: 2px solid gold;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+   
+   
     
 }
 
 #join:hover {
   background-color: #6A1616;
   color: ghostwhite;
+  border: none;
 }
 
 .footer {
   font-family: 'Amethysta', serif;
   font-size: 1.2rem;
-  padding-top: 5px;
+  position: absolute;
+  top: 71%;
+  left: 44%;
+  color: aliceblue;
+  
+}
+.footer2 {
+  font-family: 'Amethysta', serif;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 75%;
+  left: 44%;
+  color: aliceblue;
+  
 }
 
+
 .aboutGame {
-  color: ghostwhite;
+  color:red;
   position: absolute;
   bottom: 10px;
   left: 700px;
   font-size: 1.3rem;
   font-family: 'Amethysta', serif;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  text-shadow: 2px 2px 5px black;
+  height: 30px;
+  width: 170px;
 
-}  
+}   
 

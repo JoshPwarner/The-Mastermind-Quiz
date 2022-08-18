@@ -136,80 +136,81 @@ const HomePage = () => {
     };
   
     const leaderBoard = () => {
-      navigate("./leaderboard");
+      navigate("/leaderboard");
+    };
+
+    const aboutUs = () => {
+      navigate("./aboutUsPage");
     };
   
     return (
-
-    <>
+      <>
+        <div id="welcome">
+        <img className="bgImg" src={image} /> 
         <div className="heading"> <p id="leaderboardIcon" onClick={leaderBoard}>
-          SCOREBOARD 
-        </p></div>
-        <div className="headingh1"><h1> The <span className="fire">M</span><span className="fire">a</span><span className="fire">s</span><span className="fire">t</span><span className="fire">e</span><span className="fire">r</span><span className="fire">m</span><span className="fire">i</span><span class="fire">n</span><span className="fire">d</span>  Quiz </h1></div>
-      <div id="welcome">
-       <div className="form">
-        <form role="form" className="form1" >
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            //placeholder="PLAYER NAME"
-            value={usrInput || ""}
-            onChange={handleInput}
-          />
-        </form>
-        <form autoComplete="off"  className="form2">
-          <label htmlFor="roomName">Room Name</label>
-          <input
-            type="text"
-            id="roomName"
-            name="roomName"
-            //placeholder="ROOM NAME"
-            value={room || ""}
-            onChange={handleRoomInput}
-          />
-        
-          <div className="button-container">
-          <button
-            id = "join"
-            type="submit"
-            name="newQuiz"
-            className="newQuiz"
-            value="New Game"
-            onClick={handleCreate}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            NEW GAME
-          </button>
-  
-          {renderJoin()}
+            SCOREBOARD 
+          </p></div>
+          <div className="headingh1"><h1> The Mastermind Quiz </h1></div>
+        <img className="scrollPage" src={image2} />
+         <div className="form">
+          <form role="form" className="form1" >
+            {/*<label htmlFor="username">Username</label>*/}
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="PLAYER NAME"
+              value={usrInput || ""}
+              onChange={handleInput}
+            />
+          </form>
+          <form autoComplete="off"  className="form2">
+           {/*<label htmlFor="roomName">Room Name</label>*/}
+            <input
+              type="text"
+              id="roomName"
+              name="roomName"
+              placeholder="ROOM NAME"
+              value={room || ""}
+              onChange={handleRoomInput}
+            />
+          
+            <div className="button-container">
+            <button
+              id = "join"
+              type="submit"
+              name="newQuiz"
+              className="newQuiz"
+              value="New Game"
+              onClick={handleCreate}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              NEW GAME
+            </button>
+    
+            {renderJoin()}
+            </div>
+          </form>
           </div>
-        </form>
-
+          {/* Shows number of Players online */}
+          <div className="footer">
+            {playerCount <= 0
+              ? "No Players Online"
+              : `Players Online: ${playerCount}`}
+            {error && <p className="error">{error}</p>}
+          </div>
+          <div className="footer2">
+            {allUsers.length <= 0
+              ? "No Players Online ☹️ "
+              : `Players Online: ${playerCount}` && <div className="usersOnline">{allUsers.map(renderUser)}</div>}
+          </div>
         </div>
-        {/* Shows number of Players online */}
-        <div className="footer">
-          {playerCount <= 0
-            ? "No Players Online"
-            : `Players Online: ${playerCount}`}
-          {error && <p className="error">{error}</p>}
-        </div>
-        <div>
-          {allUsers.length <= 0
-            ? "No Players Online ☹️ "
-            : `Players Online: ${playerCount}` && <div className="usersOnline">{allUsers.map(renderUser)}</div>}
-        </div>
-      </div>
-      <div className="aboutGame">How To Play</div>
-      </>
-    );
-
-};
-
-export default HomePage;
-
-
+       <div className="aboutGame" onClick={aboutUs}>How To Play</div>
+        </>
+      );
+    };
+    
+    export default HomePage;
