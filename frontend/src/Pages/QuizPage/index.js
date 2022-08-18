@@ -4,42 +4,28 @@ import Questions from "../../components/Question";
 import QuizResult from "../../components/QuizResult";
 import "./QuizPage.css";
 
-const QuizPage = ({ retry, query }) => {
+const QuizPage = ({ retry }) => {
   const questions = useSelector((state) => state.quiz);
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
-  const [markedAnswers, setMarkedAnswers] = useState(
-    new Array(questions.result.results)
-  );
+  const [markedAnswers, setMarkedAnswers] = useState("");
+
   console.log(questions);
-  // const [rightAnswers, setRightAnswers] = useState(
-  //   new Array(questions.result.results)
-  // );
 
   const isQuestionEnd = currentQuestionIndex == questions.amount;
-
-  console.log(typeof isQuestionEnd);
-
-  // questions.result.results.forEach((result, index) => {
-  //   const results = Object.entries(result);
-
-  //   console.log(results);
-
-  //   for (const [key, value] of results) {
-  //     console.log(value);
-  //   }
-  // });
 
   function calculateResult() {
     let correct = 0;
     questions.result.results.forEach((result) => {
       const check = Object.entries(result);
+      for (const [key, value] of markedAnswers) {
+        console.log(value);
+      }
       for (const [key, value] of check) {
-        console.log(value, key);
-        if (value == markedAnswers) {
+        console.log(value);
+        if (decodeURIComponent(value) == markedAnswers) {
           correct++;
-          // console.log(value);
         } else {
           console.log("no chance!");
         }
@@ -63,21 +49,10 @@ const QuizPage = ({ retry, query }) => {
           totalQuestions={questions.result.results.length}
           currentQuestion={currentQuestionIndex + 1}
           setAnswer={(index) => {
-            setMarkedAnswers((arr) => {
-              let newArr = [...arr];
-              newArr[currentQuestionIndex] = index;
-              return newArr;
-            });
+            setMarkedAnswers(index);
+
             setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
           }}
-          // collectAnswer={(index) => {
-          //   setRightAnswers((arr) => {
-          //     let newAns = [...arr];
-          //     newAns[currentQuestionIndex] = index;
-
-          //     return newAns;
-          //   });
-          // }}
         />
       );
     }

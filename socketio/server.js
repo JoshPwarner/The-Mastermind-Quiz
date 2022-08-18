@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(cors());
 const server = http.createServer(app);
 
-const { Games } = require("./Game");
+const { Games } = require("../server/Game");
 
 const io = new Server(server, {
     cors: {

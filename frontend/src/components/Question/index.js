@@ -9,30 +9,8 @@ const Questions = ({ query, totalQuestions, currentQuestion, setAnswer }) => {
   // const questions = useSelector((state) => state.quiz);
   const [selectedOption, setSelectedOption] = useState("");
 
-  // const [answersLog, setAnswersLog] = useState(null);
   const timer = useRef(null);
   const progressBar = useRef(null);
-
-  // questions.result.results.map((value, index, array) => {
-  //   const check = Object.entries(array);
-  //   for (const [key, { correct_answer, incorrect_answers }] of check) {
-  //     const newOptions = [...incorrect_answers, correct_answer];
-  //     newOptions.sort();
-
-  //     // console.log(typeof newOptions);
-
-  //     // for (const i of newOptions) {
-  //     //   console.log(i);
-  //     // }
-  //   }
-  // });
-
-  // const set1 = ";,/?:@&=+$";
-
-  // const encodedQuestion = encodeURIComponent(query.question).replace(
-  //   /z/g,
-  //   (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
-  // );
 
   function containsEncodedComponents(
     question,
@@ -50,24 +28,8 @@ const Questions = ({ query, totalQuestions, currentQuestion, setAnswer }) => {
     return decodeURIComponent(a);
   });
 
-  // const decodedwrongAnswer = containsEncodedComponents(
-  //   ...query.incorrect_answers
-  // );
-  // console.log(...query.incorrect_answers);
-
-  // const options = [query.correct_answer, ...query.incorrect_answers];
-  // const shuffleOptions = options.sort();
-
   const options = [decodedAnswer, ...decodedWrongAnswer];
   const shuffleOptions = options.sort();
-
-  // const getAnswersLog = () => {
-  //   for (const i of options) {
-  //     if (i === query.correct_answer) {
-  //       setAnswersLog(options.indexOf(i));
-  //     }
-  //   }
-  // };
 
   function gotoNextQuestion() {
     if (timer.current) {
@@ -76,10 +38,9 @@ const Questions = ({ query, totalQuestions, currentQuestion, setAnswer }) => {
     setAnswer(selectedOption);
     // flushSync(() => {
     //   setAnswer(selectedOption);
-    //   // collectAnswer(answersLog);
+
     // });
     setSelectedOption(null);
-    // setAnswersLog(null);
   }
 
   useEffect(() => {
@@ -124,7 +85,6 @@ const Questions = ({ query, totalQuestions, currentQuestion, setAnswer }) => {
                   key={option}
                   onClick={() => {
                     setSelectedOption(option);
-                    // getAnswersLog(index);
                   }}
                 >
                   {option}

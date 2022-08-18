@@ -8,7 +8,7 @@ const QuizResult = ({ result }) => {
 
   const handleRestartOptions = (e) => {
     e.preventDefault();
-    navigator("../join");
+    navigator("../");
   };
   return (
     <div className="result-screen-container">

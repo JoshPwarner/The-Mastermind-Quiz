@@ -24,7 +24,6 @@ const fetchQuiz = async (numberOfQs, subject, difficulty) => {
   try {
     const { data } = await axios.get(
       `https://opentdb.com/api.php?amount=${numberOfQs}&category=${subject}&difficulty=${difficulty}&encode=url3986`
-      // `https://opentdb.com/api.php?amount=${numberOfQs}&category=${subject}&difficulty=${difficulty}`
     );
     return data;
   } catch (err) {
