@@ -1,13 +1,14 @@
+
 /* @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 /*@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";
 @import url('https://fonts.googleapis.com/css2?family=Amethysta&family=Sofia&display=swap');
 
+
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
-
 
 /* #root {
     background-image:url('../../images/img2.jpg');
@@ -18,8 +19,8 @@
     opacity: 0.8;    
 } */
 
-/* #welcome {
-    font-family: 'Amethysta', serif;
+#welcome {
+    /* font-family: 'Amethysta', serif;
     background-color: ghostwhite;
     opacity: 0.7;
     display: flex;
@@ -31,175 +32,118 @@
     justify-content: center;
     margin-top: 190px;
     
+    align-items: center; */
+
+    height: 100vh;
+    background-image: url(../../images/bg.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+}
+
+#welcome .headingh1 {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.scrollBox {
+    background-image: url(../../images/form-bg.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 600px;
+    background-position: center;
+    margin: 0 auto;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formBox {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
 
-} 
+.formBox .form1,
+.formBox .form2 {
+    width: 80%;
+}
 
-#leaderboardIcon {
-  font-family: 'Amethysta', serif;
+.formBox .form1 input,
+.formBox .form2 input {
+    width: 90%;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(255, 255, 255, 0.2);
+    color: #5e5e5e;
+    font-size: 16px;
+}
+
+.formBox .form1 input::placeholder,
+.formBox .form2 input::placeholder {
+    color: #9e9e9e;
+    font-weight: 500;
+}
+
+.formBox .form2 .button-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.formBox .form2 .button-container #new,
+.formBox .form2 .button-container #join {
+    width: 120px;
+    padding-block: 10px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    background-color: rgb(224 169 103);
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(255, 255, 255, 0.2);
+    color: #5e5e5e;
+    font-weight: 600;
+}
+
+#welcome .aboutGame {
+    width: 250px;
+    margin: 20px auto;
+    padding-block: 10px;
+    border: none;
+    outline: none;
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(255, 255, 255, 0.2);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+}
+
+
+
+/* #leaderboardIcon {
+    font-family: "Amethysta", serif;
     font-size: 1.5rem;
     padding-bottom: 10px;
-    color:whitesmoke;
+    color: whitesmoke;
     display: inline;
     position: relative;
-    
-    
-}
+} */
 
 
-h1 {
-  
-   opacity: 0.9;
-    color: red;
-    font-size: 2.5em;
-    font-family: 'Amethysta', serif;
-    text-align: center;
-    line-height: 3rem;
-    text-transform: uppercase;
-    letter-spacing: .3em;
-    white-space:nowrap;
-    display: inline;
-    padding-block: 5px;
-    padding-inline: 15px;
-    background-color:whitesmoke;
-    border-radius: 8px;
-    text-shadow: 2px 2px 5px black;
-    
-
-  }
-
-  .headingh1 {
-    margin-top: 30px;
-  } 
-
-  .bgImg {
-    position: absolute;
-    justify-content: center;
-    object-fit: cover;
-    display: flex;
-    flex-direction: column;
-    width: 210vh;
-    height: 100vh;
-    opacity: 0.9;
-    
-    
-  }
-
-  .scrollPage {
-    position: absolute;
-    opacity: 0.7;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    left:550px;
-  }
-  
- 
- 
-.form {
-  font-family: 'Amethysta', serif;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-
-  
-}
-
-.form1 {
-
-  margin-bottom: 5px;
-  margin-top: 30px;
-
-}
-
-.form2 {
-  margin-bottom: 15px;
-}
-
-input {
-   font-family: 'Amethysta', serif;
-    height: 25px;
-    border:none;
-    border-bottom: 2px solid ghostwhite;
-    margin-bottom: 40px;
-    background: none;
-    color:ghostwhite;
-    font-weight: 300;
-    font-size: 1.2rem;
-    outline: none;
-   
-}
-
-.button-container {
-  font-family: 'Amethysta', serif;
-    font-size: 1.5rem;
-    margin-left: 15px;
-}
-
-#join {
-  font-family: 'Amethysta', serif;
-    font-family: 'Amethysta', serif;
-    font-size: 1.2rem;
-    height: 30px;
-    width: 150px;
-    border-radius: 5px;
-    border: 2px solid gold;
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    
-   
-   
-    
-}
-
-#join:hover {
-  background-color: #6A1616;
-  color: ghostwhite;
-  border: none;
-}
-
-.footer {
-  font-family: 'Amethysta', serif;
-  font-size: 1.2rem;
-  position: absolute;
-  top: 71%;
-  left: 44%;
-  color: aliceblue;
-  
-}
-.footer2 {
-  font-family: 'Amethysta', serif;
-  font-size: 1.2rem;
-  position: absolute;
-  top: 75%;
-  left: 44%;
-  color: aliceblue;
-  
-}
 
 
-.aboutGame {
-  color:red;
-  position: absolute;
-  bottom: 10px;
-  left: 700px;
-  font-size: 1.3rem;
-  font-family: 'Amethysta', serif;
-  background-color: whitesmoke;
-  border-radius: 8px;
-  text-shadow: 2px 2px 5px black;
-  height: 30px;
-  width: 170px;
 
-}   
- */
+

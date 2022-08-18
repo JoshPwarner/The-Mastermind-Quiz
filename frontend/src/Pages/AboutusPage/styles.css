@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Amethysta&family=Sofia&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amethysta&family=Sofia&display=swap");
 
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 
 
 
@@ -41,6 +42,7 @@
    }
 
    .h2Tag {
+
     font-family: 'Amethysta', serif;
     color: red;
     font-size: 2.2rem;
@@ -78,4 +80,6 @@
   }
 
     
-  
+
+ 
+
