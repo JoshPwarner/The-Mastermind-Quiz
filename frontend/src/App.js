@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import { HomePage, Lobby, SetGame, QuizPage, LeaderBoard } from "./Pages";
+import { HomePage, Lobby, SetGame, QuizPage, LeaderBoard, AboutusPage } from "./Pages";
 
 const App = () => {
   return (

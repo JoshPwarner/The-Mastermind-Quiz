@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setHost, setPlayer, setID } from "../../actions/userType";
-
+import image from '../../images/img2.jpg';
+import image2 from '../../images/scroll-png.png';
 import { socket } from "../../Socket/index.js";
 import './homePagestyles.css';
 
