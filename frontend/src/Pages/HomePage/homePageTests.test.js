@@ -21,4 +21,9 @@ describe("HomePage", () => {
         let form = screen.getByRole("form");
         expect(form).toBeInTheDocument();
     });
+
+    test("it renders the AboutUsPage ", () => {
+        const AboutusPage = screen.getByRole("aboutGame");
+        expect(AboutusPage).toBeInTheDocument();
+      });
 });

@@ -219,22 +219,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-          </form>
-          </div>
-          {/* Shows number of Players online */}
-          <div className="footer">
-            {playerCount <= 0
-              ? "No Players Online"
-              : `Players Online: ${playerCount}`}
-            {error && <p className="error">{error}</p>}
-          </div>
-          <div className="footer2">
-            {allUsers.length <= 0
-              ? "No Players Online ☹️ "
-              : `Players Online: ${playerCount}` && <div className="usersOnline">{allUsers.map(renderUser)}</div>}
-          </div>
-        </div>
-       <div role="gotoaboutUs" className="aboutGame" onClick={aboutUs}>How To Play</div>
+          
         </>
     );
 };

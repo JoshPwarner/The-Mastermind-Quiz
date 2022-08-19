@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./leaderboardstyles.css";
+import image from "../../images/leaderboard.jpg";
 
 const LeaderBoard = () => {
     const navigate = useNavigate();
@@ -33,19 +34,23 @@ const LeaderBoard = () => {
     return (
         
      <>
+     <div className="leaderboardbgimg">
         <div className="leaderboard-display">
-         <button aria-label="leaderboard-back-button" id="leaderboard-back-button"  onClick={navigateHome}>
+         <button  className="lbbtn" aria-label="leaderboard-back-button" id="leaderboard-back-button"  onClick={navigateHome}>
             Back to homepage
          </button>
-         <h2 role="leaderboard-heading">LEADERBOARD</h2>
-         <div className="leaderboard-container">
-            <div role="leaderboard-table">
+         <h2  className="lbHeading" role="leaderboard-heading">Hall Of Fame</h2>
+         
+            <div className="lbTable" role="leaderboard-table">
                 <p>Username</p>
                 <p>Score</p>
+
+                </div>
+
+            <div className="leaderboard-container">
                 {leaderBoardDisplay}
             </div>
-
-         </div>
+        </div>
         </div>
      </>
         

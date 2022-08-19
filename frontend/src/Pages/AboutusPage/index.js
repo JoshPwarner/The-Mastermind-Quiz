@@ -20,15 +20,14 @@ function AboutusPage() {
       {/*<img className="scrollPage" src={image2} />*/}
       <h2 className='h2Tag'>How To Play</h2>
       <ul className='aboutPara'>
-        <li className="htp-list">Create a user Name</li>
-        <li className="htp-list">Create or Join A Room</li>
-        <li className="htp-list">Select The Category Of Questions</li>
-        <li className="htp-list">Select The Difficulty Of Questions</li>
-        <li className="htp-list">Select The Number Of Questions</li>
-        <li className="htp-list">Start The Quiz</li>
-        <li className="htp-list">Select An Answer Before Time Runs Out</li>
+        <li className="htp-list">Create a user Name.</li>
+        <li className="htp-list">Create or Join A Room.</li>
+        <li className="htp-list">Select The Category Of Questions.</li>
+        <li className="htp-list">Select The Difficulty Of Questions.</li>
+        <li className="htp-list">Select The Number Of Questions.</li>
+        <li className="htp-list">Start The Quiz.</li>
+        <li className="htp-list">Select An Answer Before Time Runs Out.</li>
         <li className="htp-list">Good Luck!</li>
-
       </ul>
       <button className="aboutBtn" onClick={handlebackhome}><span>Back Home </span></button>
     </div>
